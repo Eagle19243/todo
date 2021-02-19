@@ -10,9 +10,9 @@ import Todo from './models/todo.entity';
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
-      port: 5432,
-      username: 'postgres',
-      password: 'postgres',
+      port: 3306,
+      username: 'root',
+      password: 'root',
       database: 'todo-database',
       entities: [Todo],
       synchronize: true,
