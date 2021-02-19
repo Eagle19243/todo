@@ -13,7 +13,7 @@ import Todo from './models/todo.entity';
       port: 3306,
       username: 'root',
       password: 'root',
-      database: 'todo-database',
+      database: 'todo',
       entities: [Todo],
       synchronize: true,
     }),
