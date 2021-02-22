@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { GraphQLModule } from '@nestjs/graphql';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TodoModule } from './modules/todo';
@@ -16,6 +17,12 @@ import Todo from './models/todo.entity';
       database: 'todo',
       entities: [Todo],
       synchronize: true,
+    }),
+    GraphQLModule.forRoot({
+      autoSchemaFile: 'schema.gql',
+      // include: [TodoModule],
+      // debug: true,
+      // playground: true,
     }),
     TodoModule,
   ],
