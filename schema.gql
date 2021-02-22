@@ -19,3 +19,7 @@ scalar DateTime
 type Query {
   todo(id: Float!): Todo!
 }
+
+type Mutation {
+  createTodo(longDesc: String!, shortDesc: String!): Todo!
+}
